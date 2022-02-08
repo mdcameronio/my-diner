@@ -2,7 +2,7 @@
 <body>
 <div class="container">
     <h1>My Diner</h1>
-    <h2>Meal Order Part 2</h2>
+    <h2>Meal Order Part 3</h2>
 
     <form action="#" method="post" class="form-horizontal">
 
@@ -10,9 +10,12 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">Select condiments</label>
             <div class="col-sm-4">
-                <label><input type="checkbox" name="bev[]" value="pepsi"> pepsi</label><br>
-                <label><input type="checkbox" name="bev[]" value="coke"> coke</label><br>
-                <label><input type="checkbox" name="bev[]" value="mtdew"> mtdew</label><br>
+                <repeat group="{{@bev}}" value="{{@bevs}}">
+                    <label><input type="checkbox" name="bev[]" value="{{@bevs}}">{{ucfirst(@bevs)}}</label><br>
+                </repeat>
+<!--                <label><input type="checkbox" name="bev[]" value="pepsi"> pepsi</label><br>-->
+<!--                <label><input type="checkbox" name="bev[]" value="coke"> coke</label><br>-->
+<!--                <label><input type="checkbox" name="bev[]" value="mtdew"> mtdew</label><br>-->
             </div>
         </div>
         <div class="col-xs-3 ">
